@@ -1,5 +1,5 @@
 <template>
-
+<div>
 <div class="grid grid-flow-col justify-stretch">
   
     <nav class="bg-white border-gray-200 dark:bg-gray-900">
@@ -64,7 +64,7 @@
         </svg>
     </div>
 </div>
-
+</div>
 
 </template>
 <script>

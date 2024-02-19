@@ -1,5 +1,5 @@
 <template>
-<div class="carousel carousel-center max-w-xl p-4 space-x-4 bg-neutral rounded-box">
+<div class="carousel max-w-full p-4 space-x-4 bg-neutral rounded-box">
      <div class="carousel-item">
 <img src="./categories/Bijoux.svg" class="rounded-box" />
   </div> 

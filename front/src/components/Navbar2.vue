@@ -39,23 +39,34 @@
                             Autres
                         </a>
                     </ul>
-                    <ul class="py-2 lg:py-0 ">
+                    <ul class="py-4 lg:py-0 ">
                         <a class="text-red-600 hover:pb-4 hover:border-b-4 hover:border-yellow-400" href="#">
                        <Button 
                        name="Se connecter" 
+                       backgroundColor="#B31414"
                        />
                         </a>
                     </ul>
-                    <ul class="py-2 lg:py-0 ">
+                    <ul class="py-4 lg:py-0 ">
                         <a class="text-red-600 hover:pb-4 hover:border-b-4 hover:border-yellow-400" href="#">
                        <Button 
                        name="S'inscrire" 
+                       backgroundColor="#B31414"
                        />
                         </a>
                     </ul>
                     <ul class="py-2 lg:py-0 ">
                         <a class="text-red-600 hover:pb-4 hover:border-b-4 hover:border-yellow-400" href="#">
-                            Autres
+                            A propos
+                        </a>
+                    </ul>
+                    <ul class="py-2 lg:py-0 ">
+                        <a class="text-red-600 hover:pb-4 hover:border-b-4 hover:border-yellow-400" href="#">
+                            Aide
+                        </a>
+                    </ul>  <ul class="py-2 lg:py-0 ">
+                        <a class="text-red-600 hover:pb-4 hover:border-b-4 hover:border-yellow-400" href="#">
+                            Contactez-nous
                         </a>
                     </ul>
                 </ul>
