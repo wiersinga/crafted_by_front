@@ -49,7 +49,7 @@
     <img src="./categories/Technologie.svg" class="rounded-box" />
   </div>
        <div class="carousel-item">
-    <img src="./categories/Voyage.svg" class="rounded-box" />
+       <img src="./categories/Voyage.svg" class="rounded-box" />
   </div>
   
 </div>

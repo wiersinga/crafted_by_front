@@ -40,4 +40,9 @@
 a,
 h2 {
     color: #F0EDEE;
-}</style>
+}
+.card {
+    background-color:rgb(179, 20, 20);
+}
+
+</style>

@@ -1,5 +1,5 @@
 <template>
-  <button class="btn" :style="{backgroundColor: backgroundColor}">{{ name }}</button>
+  <button class="btn text-centerrounded-lg text-sm px-5 py-2.5" type="submit" :style="{backgroundColor: backgroundColor}">{{ name }}</button>
 </template>
 <script>
 export default {
