@@ -3,8 +3,8 @@
     <div class="containerAccount">
         <h2 class="flex justify-center">Connectez-vous à votre compte</h2>
         <p class="text-sm flex justify-center font-light text-gray-500 dark:text-gray-400">
-            Vous êtes un nouvel utilisateur? <a href="#"
-                class="font-medium text-primary-600 hover:underline dark:text-primary-500"> Créer un compte.</a>
+            Vous êtes un nouvel utilisateur? <RouterLink to="/register"
+                class="font-medium text-primary-600 hover:underline dark:text-primary-500"> Créer un compte.</RouterLink>
         </p>
 
 

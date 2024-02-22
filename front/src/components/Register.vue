@@ -2,12 +2,10 @@
     <div class="container">
         <h2 class="flex justify-center">Créer votre compte</h2>
         <p class="text-sm flex justify-center font-light text-gray-500 dark:text-gray-400">
-            Vous avez déjà un compte? <a href="#"
-                class="font-medium text-primary-600 hover:underline dark:text-primary-500"> Connectez-vous</a>
+            Vous avez déjà un compte? <RouterLink to="/login"
+                class="font-medium text-primary-600 hover:underline dark:text-primary-500"> Connectez-vous</RouterLink>
         </p>
 
-
-      
 
         <div class="py-10">
             <form class="space-y-4 md:space-y-6" action="#">

@@ -2,7 +2,7 @@
     <nav class="lg:px-16 px-6 bg-white shadow-md flex flex-wrap items-center lg:py-0 py-2">
         <div class="flex-1 flex justify-between items-center">
          
-                <router-link to="/home"  class="flex text-lg font-semibold">
+                <router-link to="/"  class="flex text-lg font-semibold">
                     <div class="mt-3 text-red-600">Cr</div>
                     <img src="./icons/logo.svg" width="50" height="50" class="p-2" alt="Rz Codes Logo" />
                     <div class="mt-3 text-red-600">fted By</div>
@@ -21,9 +21,9 @@
             <nav>
                 <ul class="text-xl text-center items-center gap-x-5 pt-4 md:gap-x-4 lg:text-lg lg:flex  lg:pt-0">
                     <ul class="py-2 lg:py-0 ">
-                        <a class="text-red-600 hover:pb-4 hover:border-b-4 hover:border-yellow-400" href="#">
+                        <RouterLink class="text-red-600 hover:pb-4 hover:border-b-4 hover:border-yellow-400" to="/products">
                             Produits
-                        </a>
+                        </RouterLink>
                     </ul>
                     <ul class="py-2 lg:py-0 ">
                         <a class="text-red-600 hover:pb-4 hover:border-b-4 hover:border-yellow-400" href="#">

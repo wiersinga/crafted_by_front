@@ -13,8 +13,7 @@
 </template>
 
 <script>
-import Product from './Product.vue'; // Assurez-vous de remplacer le chemin par le chemin réel de votre composant Product
-
+import Product from './Product.vue'; 
 export default {
   components: {
     Product

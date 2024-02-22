@@ -22,7 +22,6 @@
 
 <script setup>
 import CategoriesCarousel from './components/CategroriesCarousel.vue';
-import Product from './components/Product.vue'
 import Navbar2 from './components/Navbar2.vue';
 import TopFooter from './components/TopFooter.vue';
 import BottomFooter from './components/BottomFooter.vue';
