@@ -1,30 +1,42 @@
 import { defineStore } from 'pinia';
 
-export const useCartStore = defineStore('cart', {
+export const useCartStore = defineStore('cartStore', {
     state: () => ({
-        items: JSON.parse(localStorage.getItem('cart')) || [],
+        items: JSON.parse(localStorage.getItem('items')) || [],
     }),
     getters: {
         countCartItems(state) {
             return state.items.length;
         },
         totalPrice(state){
-            return state.items.reduce((total, item)=> total+item.price*item.quantity,0);
-        }
-       
+                return state.items.reduce((accumulator, current) => {
+                  accumulator += current.price
+                  return accumulator
+                }, 0);
+              
+        }      
     }, 
     actions: {
-        addToCart(item) {
-            let existingItemIndex = this.items.findIndex(product=>product.id);
-            if (existingItemIndex !== -1){
-                this.items[existingItemIndex].quantity++;
-            } else {
-                this.items.push({...item, quantity:1});
-            }
-            this.saveCartTolocalStorage();
+        saveCartTolocalStorage(){
+            localStorage.setItem('items', JSON.stringify(this.items));
+            console.log('saved to local Storage')
         },
-        removeItem(itemId){
-            this.items= this.items.filter(item=>item.id !== itemId);
+        addToCart(item) {
+        //    let existingItemIndex = this.items.findIndex(product => product && product.id === item.id);
+        //     if (existingItemIndex !== -1){
+        //        this.items[existingItemIndex].quantity++;
+        //     } else {
+        //        this.items.push({...item, quantity:1});
+        //     }
+        
+            this.items.push(item);
+            console.log(this.items);
+            this.saveCartTolocalStorage();
+        
+        },
+        removeItem(item){
+            const index = this.items.indexOf(item);
+            this.items.splice(index, 1);
             this.saveCartTolocalStorage();
         }, 
         updateItemQuantity(itemId, newQuantity){
@@ -35,15 +47,12 @@ export const useCartStore = defineStore('cart', {
                     this.saveCartTolocalStorage();
                 }
             }
-           
         }, 
         clearCart(){
             this.items= [];
-        }, 
-        saveCartTolocalStorage(){
-            localStorage.setItem('cart', JSON.stringify(this.items));
-        }
-
+            this.saveCartTolocalStorage();
+        },    
+    
 
     }
 })

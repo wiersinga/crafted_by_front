@@ -67,7 +67,7 @@
               <!-- Filters -->
               <form class="filterGrid hidden lg:block">
                 <Disclosure as="div" v-for="section in filters" :key="section.id" class="border-b border-gray-200 py-6" v-slot="{ open }">
-                  <h3 class="-my-3 flow-root">
+                  <h3 class="-my-3 flow-root">test
                     <DisclosureButton class="flex w-full items-center justify-between bg-white py-3 text-sm text-gray-400 hover:text-gray-500 rounded-xl">
                       <span class="font-medium text-gray-900">{{ section.name }}</span>
                       <span class="ml-6 flex items-center">
@@ -77,6 +77,7 @@
                     </DisclosureButton>
                   </h3>
                   <DisclosurePanel class="pt-6">
+                    test2
                     <div class="space-y-4">
                       <div v-for="(option, optionIdx) in section.options" :key="option.value" class="flex items-center">
                         <input :id="`filter-${section.id}-${optionIdx}`" :name="`${section.id}[]`" :value="option.value" type="checkbox" :checked="option.checked" class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500" />
@@ -85,6 +86,30 @@
                     </div>
                   </DisclosurePanel>
                 </Disclosure>
+
+                <!--moi modif-->
+                <!-- <Disclosure as="div" class="border-b border-gray-200 py-6" v-slot="{ open }">
+                  <h3>
+                    <DisclosureButton class="flex w-full items-center justify-between bg-white py-3 text-sm text-gray-400 hover:text-gray-500 rounded-xl">
+                      <span class="font-medium text-gray-900">Catégories</span>
+                      <span class="ml-6 flex items-center">
+                        <PlusIcon v-if="!open" class="h-5 w-5" aria-hidden="true" />
+                        <MinusIcon v-else class="h-5 w-5" aria-hidden="true" />
+                      </span>
+                    </DisclosureButton>
+                  </h3>
+                  <DisclosurePanel class="pt-6">
+                    test2
+                    <div class="space-y-4">
+                      <div v-for="category in storeCategory.categories" :key="category.id" class="flex items-center">
+                        <input :id="`filter-${category.id}`" :name="`${category.name}[]`" :value="categorie.name" type="checkbox"  class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500" />
+                        <label :for="`filter-${section.id}-${optionIdx}`" class="ml-3 text-sm text-gray-600">{{ category.name }}</label>
+                      </div>
+                    </div>
+                  </DisclosurePanel>
+                 
+                </Disclosure> -->
+               
               </form>
   
               <!-- Product grid -->
@@ -114,6 +139,18 @@
   </style>
   
   <script setup>
+import { useCategoryStore } from "@/stores/category";
+import { onMounted } from "vue";  
+
+
+const storeCategory = useCategoryStore();
+
+onMounted(() => {
+  storeCategory.fetchCategories();
+    console.log('categories');
+})
+
+
   import { ref } from 'vue';
   import {
     Dialog,

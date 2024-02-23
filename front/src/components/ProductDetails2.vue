@@ -23,12 +23,11 @@
           </div>
 
           <div class="flex">
-            <span class="title-font font-medium text-2xl text-gray-900">Prix: {{ store.currentProduct?.price }}</span>
+            <span class="title-font font-medium text-2xl text-gray-900">Prix: {{ store.currentProduct?.price }} €</span>
           </div>
           <div class="py-16 flex  items-center flex-col">
-            <RouterLink to="/login">
-              <Button name="Ajouter au panier" backgroundColor="#B31414" />
-            </RouterLink>
+            
+              <Button name="Ajouter au panier" backgroundColor="#B31414" @click="storeCart.addToCart(store.currentProduct)"/>
 
             <RouterLink to="/">
               <Button class="mt-4" name="Revenir aux produits" backgroundColor="#07393C" />
@@ -72,6 +71,8 @@
 import Button from './Button.vue';
 import { onMounted } from "vue";
 import { useProductStore } from '@/stores/products';
+import { useCartStore } from '@/stores/shoppingCart';
+
 import { useRouter, useRoute } from 'vue-router'
 
 const route= useRoute();
@@ -79,12 +80,12 @@ console.log(route);
 
 const store = useProductStore();
 
+const storeCart = useCartStore();
+
 onMounted(()=> {
     store.getProductById(route.params.id);
     console.log(store, 'test2');
 })
-
-
 
 </script>
 

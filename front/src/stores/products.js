@@ -6,7 +6,7 @@ import  api_url  from '../services/api'
 export const useProductStore= defineStore("product", {
     state: () => ({
         products: [], 
-        currentProduct: null, 
+        currentProduct: {}, 
         loading: false,
         error: null,
     }),
@@ -25,7 +25,7 @@ export const useProductStore= defineStore("product", {
             }
         },
         async getProductById(productId){
-            this.currentProduct = null
+           // this.currentProduct = null
             this.loading =true
             try {
                 const data = await api_url.get(`/products/${productId}`)
@@ -37,7 +37,7 @@ export const useProductStore= defineStore("product", {
             } finally {
                 this.loading = false
             }
-        }
+        }, 
     },
 }
 )
