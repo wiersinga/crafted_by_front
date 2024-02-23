@@ -1,15 +1,22 @@
 <template>
   <div class="bottomF" aria-labelledby="footer-heading">
-    <div class="mx-auto max-w-7xl px-6 pb-8 pt-16 sm:pt-24 lg:px-8 lg:pt-32 flex justify-center">
-      <div class="mt-16 border-t border-gray-900/10 pt-8 sm:mt-20 lg:mt-24">
-        <div class="xl:grid xl:grid-cols-3 xl:gap-8">
-          <div class="space-y-8">
-            <img class="h-15" src="./icons/logo.svg" alt="Company name">
-          </div>
+    <div class="mx-auto max-w-7xl px-6 pb-8 pt-16 sm:pt-24 lg:px-8 lg:pt-32">
+      <div class="mt-16 pt-8 sm:mt-20 lg:mt-24 flex flex-col">
+        <!--start logo-->
+
+        <div class="space-y-8 flex justify-center">
+          <img class="h-15 m-auto" src="./icons/logo.svg" alt="Company name">
         </div>
-        <p class="copyRight text-xs leading-5">&copy; 2024 Crafted By, Inc. Tous les droits sont resérvés.</p>
-        <div class="flex space-x-6 flec justify-center">
-          <a href="#" class="text-gray-400 hover:text-gray-500">
+        <!--start copyright-->
+        
+        <div class=" flex justify-center">
+          <p class="copyRight text-xs leading-5">&copy; 2024 Crafted By, Inc. Tous les droits sont resérvés.</p>
+        </div>
+
+        <!--start icons-->
+        <div class="flex space-x-6  flex justify-center">
+          <!--Fb-->
+          <a href="https://www.facebook.com/" target="_blank" class="text-gray-400 hover:text-gray-500">
             <span class="sr-only">Facebook</span>
             <svg width="23" height="21" viewBox="0 0 23 21" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path
@@ -18,25 +25,26 @@
             </svg>
 
           </a>
-          <a href="#" class="text-gray-400 hover:text-blue-400">
+          <!--x-->
+          <a href="https://twitter.com/" target="_blank" class="text-gray-400 hover:text-blue-400">
             <span class="sr-only">X</span>
             <svg width="23" height="18" viewBox="0 0 23 18" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path
                 d="M15.6427 2.08333C13.8631 2.08333 12.4125 3.40421 12.3807 5.04847L12.3491 6.68914C12.3425 7.03422 12.0349 7.30901 11.6622 7.30286C11.6356 7.30245 11.6092 7.30057 11.583 7.29724L9.82709 7.07557C7.51689 6.7838 5.30271 5.79928 3.17859 4.16048C2.50587 7.60807 3.81903 9.99703 6.98412 11.8395L8.94949 12.9835C9.26509 13.1672 9.3601 13.5531 9.16169 13.8453C9.11621 13.9122 9.05743 13.9707 8.98845 14.0173L7.19783 15.2287C8.26247 15.2906 9.27458 15.2473 10.1134 15.0923C15.4207 14.1117 18.9499 10.4135 18.9499 4.31358C18.9499 3.81557 17.8111 2.08333 15.6427 2.08333ZM10.1311 5.0113C10.1846 2.2352 12.6317 0 15.6427 0C17.1764 0 18.5638 0.579979 19.5632 1.51599C20.3635 1.51042 21.0443 1.69777 22.5655 0.843354C22.1895 2.55208 22.0028 3.29371 21.1999 4.31358C21.1999 12.2735 15.9157 16.1446 10.5537 17.1354C6.87756 17.8147 1.53129 16.6994 0 15.2173C0.780109 15.1618 3.95322 14.8458 5.78659 13.6033C4.23521 12.6548 -1.93943 9.28963 2.11771 0.246219C4.02286 2.30523 5.95424 3.70677 7.91186 4.45084C9.21394 4.94576 9.53378 4.93589 10.1311 5.0113Z"
                 fill="#2C666E" />
             </svg>
-
           </a>
-          <a href="#" class="text-gray-400 hover:text-gray-500">
-            <span class="sr-only">Pinterset</span>
+          <!--Pin-->
+          <a href="https://www.pinterest.fr/" target="_blank" class="text-gray-400 hover:text-gray-500">
+            <span class="sr-only">Pinterest</span>
             <svg width="23" height="21" viewBox="0 0 23 21" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path
                 d="M7.30196 17.9075C7.32867 17.5569 7.38234 17.2082 7.46278 16.8643C7.53363 16.5574 7.74865 15.6871 8.06371 14.4269L8.07168 14.3949C8.21022 13.8408 8.35865 13.2492 8.50708 12.6589C8.59614 12.3046 8.6654 12.0296 8.71132 11.9377C8.49278 11.4711 8.3835 10.9649 8.39105 10.4555C8.39105 9.0624 9.24156 7.98291 10.3442 7.98292C10.7488 7.97718 11.1359 8.13946 11.4045 8.42708C11.6723 8.71406 11.796 9.0974 11.7443 9.46458C11.7443 9.93594 11.648 10.2963 11.2337 11.5846C11.1542 11.832 11.0997 12.0056 11.0481 12.1792C10.9897 12.3749 10.9408 12.5524 10.8987 12.7225C10.7908 13.1253 10.8901 13.5531 11.1659 13.8745C11.4409 14.195 11.8588 14.3715 12.2973 14.3502C13.9761 14.3502 15.2225 12.2824 15.2225 9.61219C15.2225 7.56046 13.7702 6.20233 11.3614 6.20225C10.1491 6.15757 8.97039 6.58878 8.09997 7.39569C7.22887 8.20321 6.74273 9.31636 6.75519 10.4806C6.72881 11.1076 6.94087 11.7225 7.33169 12.193C7.53544 12.3376 7.61367 12.5922 7.5281 12.8064C7.48191 12.9825 7.37056 13.3826 7.32995 13.5161C7.30537 13.6492 7.21574 13.7636 7.08782 13.8245C6.95902 13.8857 6.80708 13.8851 6.68835 13.8268C5.3821 13.3285 4.66728 11.9753 4.66728 10.2447C4.66728 7.13445 7.47035 4.42677 11.6333 4.42677C15.1607 4.42677 17.7999 6.85275 17.7999 9.78083C17.7999 13.4604 15.6264 16.1398 12.5243 16.1398C11.6306 16.1669 10.7807 15.7938 10.2218 15.1406L10.1734 15.325C10.0675 15.7283 10.0145 15.93 9.9403 16.2123L9.93816 16.2203C9.77368 16.8455 9.65893 17.2797 9.61438 17.4429C9.49525 17.8123 9.34427 18.175 9.16438 18.5251C9.83376 18.6722 10.532 18.75 11.25 18.75C16.2206 18.75 20.25 15.0191 20.25 10.4167C20.25 5.81429 16.2206 2.08333 11.25 2.08333C6.27944 2.08333 2.25 5.81429 2.25 10.4167C2.25 13.7077 4.31039 16.5532 7.30196 17.9075ZM11.25 20.8333C5.03679 20.8333 0 16.1696 0 10.4167C0 4.6637 5.03679 0 11.25 0C17.4632 0 22.5 4.6637 22.5 10.4167C22.5 16.1696 17.4632 20.8333 11.25 20.8333Z"
                 fill="#2C666E" />
             </svg>
-
           </a>
-          <a href="#" class="text-gray-400 hover:text-gray-500">
+          <!--Insta-->
+          <a href="https://www.instagram.com/" target="_blank" class="text-gray-400 hover:text-gray-500">
             <span class="sr-only">Instagram</span>
             <svg width="23" height="21" viewBox="0 0 23 21" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path
@@ -44,16 +52,19 @@
                 fill="#2C666E" />
             </svg>
           </a>
+          <!--end Insta-->
+        </div>
+        <!--end icons-->
       </div>
     </div>
   </div>
-</div>
 </template>
 
 <style scoped>
 .bottomF {
   margin-top: -150px;
 }
+
 .copyRight {
   color: #2C666E;
 }

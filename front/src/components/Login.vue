@@ -7,7 +7,6 @@
                 class="font-medium text-primary-600 hover:underline dark:text-primary-500"> Créer un compte.</RouterLink>
         </p>
 
-
         <div class="py-10">
             <form class="space-y-4 md:space-y-6" action="#">
                 <div>
@@ -17,12 +16,13 @@
                         class="text-gray-900 sm:text-sm block w-full p-2.5 dark:bg-gray-700 dark:placeholder-gray-400 dark:text-white"
                         placeholder="name@company.com" required="">
                 </div>
+                
 
-                <div class="py-2" x-data="{ show: false }">
+                 <div class="py-2" x-data="{ show: false }">
                      <label for="password" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Mot de
                         passe</label> 
                     <div class="relative">
-                        <input :type="show? 'password' : 'text'" name="password" id="password" placeholder="••••••••"
+                        <input :type="show? 'password' : 'password'" name="password" id="password" placeholder="••••••••"
                         class="text-gray-900 sm:text-sm block w-full p-2.5 dark:bg-gray-700 dark:placeholder-gray-400 dark:text-white "
                         required="">
 
@@ -36,7 +36,7 @@
                                 </svg>
                         </div>
                     </div>
-                </div>
+                </div> 
                 <div>
                     <label for="confirm-password"
                         class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Mot de
@@ -142,4 +142,6 @@ export default {
         Button,
     }
 }
+
+
 </script>

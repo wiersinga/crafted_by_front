@@ -8,12 +8,11 @@ export const useCartStore = defineStore('cartStore', {
         countCartItems(state) {
             return state.items.length;
         },
-        totalPrice(state){
-                return state.items.reduce((accumulator, current) => {
-                  accumulator += current.price
-                  return accumulator
-                }, 0);
-              
+        totalPrice(state){               
+                    return parseFloat(state.items.reduce((accumulator, current) => {
+                        accumulator += current.price;
+                        return accumulator;
+                    }, 0).toFixed(2));                
         }      
     }, 
     actions: {
