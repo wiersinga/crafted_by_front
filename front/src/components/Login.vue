@@ -8,17 +8,17 @@
         </p>
 
         <div class="py-10">
-            <form class="space-y-4 md:space-y-6" action="#">
+            <form class="space-y-4 md:space-y-6" action="#" @submit.prevent="login">
                 <div>
                     <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Adresse
                         e-mail</label>
-                    <input type="email" name="email" id="email"
+                    <input type="email" name="email" id="email" v-model="email"
                         class="text-gray-900 sm:text-sm block w-full p-2.5 dark:bg-gray-700 dark:placeholder-gray-400 dark:text-white"
                         placeholder="name@company.com" required="">
                 </div>
                 
 
-                 <div class="py-2" x-data="{ show: false }">
+                 <!-- <div class="py-2" x-data="{ show: false }">
                      <label for="password" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Mot de
                         passe</label> 
                     <div class="relative">
@@ -36,12 +36,12 @@
                                 </svg>
                         </div>
                     </div>
-                </div> 
+                </div>  -->
                 <div>
                     <label for="confirm-password"
                         class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Mot de
                         passe</label>
-                    <input type="confirm-password" name="confirm-password" id="confirm-password" placeholder="••••••••"
+                    <input type="confirm-password" name="confirm-password" id="confirm-password" placeholder="••••••••" v-model="password"
                         class="text-gray-900 sm:text-sm block w-full p-2.5 dark:bg-gray-700 dark:placeholder-gray-400 dark:text-white"
                         required="">
                 </div>
@@ -49,7 +49,7 @@
                       <a href="#" class="text-sm font-medium text-primary-600 hover:underline dark:text-primary-500">Mot de passe oublié?</a>
                 </div>
                 <div class="flex justify-center">
-                    <Button name="Créér un compte" backgroundColor="#B31414" />
+                    <Button name="Créér un compte" backgroundColor="#B31414" type="submit" />
                 </div>
             </form>
         </div>
@@ -135,13 +135,11 @@ label {
     }
 }
 </style>
-<script>
+<script setup>
 import Button from './Button.vue';
-export default {
-    components: {
-        Button,
-    }
-}
+
+
+const storeAuth = useAuthStore();
 
 
 </script>
